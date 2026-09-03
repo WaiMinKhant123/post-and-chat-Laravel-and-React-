@@ -1,0 +1,4 @@
+node_modules/
+postandchat-backend/vendor/
+postandchat-frontend/node_modules/
+.env
