@@ -13,7 +13,7 @@ const authSlice=createSlice({
             state.user=user;
             state.token=access_token;
         },
-    logutState:(state)=>{
+        logoutState:(state)=>{
         state.user=null;
         state.token=null;
     },
