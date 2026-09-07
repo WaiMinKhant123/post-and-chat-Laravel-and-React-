@@ -1,17 +1,47 @@
-### Post and Chat System with Ecommerence by Laravel+React
+# Post, Chat, and E-Commerce System
 
-## Features Implemented 
+A Post, Chat, and E-Commerce system built with Laravel and React.
 
-### Authentication & Authorization (5/6/26)
-- **JWT Authentication:** Integrated JSON Web Tokens (JWT) for secure, stateless API authentication between Laravel backend and React frontend.
-- **Protected Routes:** Enforced auth middleware on logout and refresh endpoints.
-- **Refresh to Renew Barear Token:** Make access JWT tokens saved in redux state and refresh token is saved in cookies, so hacker can't steal token.
-- **Redux RTK query implementation:** Make rtk query in redux for register,login,logout,refresh.
+## Development Progress
 
-### Post Management & Media Upload (6/6/26)
-- **Post CRUD API:** Built Laravel endpoints for creating, fetching, updating, and deleting posts.
-- **Performance Scabalitity:** Use cursorpaginate to show lastest 20(default) and max 50 to get infinite scrolling in react ui,I feed 1000 posts data but still good performance.
-- **Avoiding N+1 queries** I avoid N+1 queries by Eager Loading to avoid lazy Loading.
-- **Polymorphic Media Upload:** Integrated Laravel polymorphic relationships (`morphMany`) to handle image and video uploads for both posts,messages and chat on Cloudinary.
-- **Clean Code:** Write all Laravel codes in clean and refactor easy form.Split as services and validations so Controllers are only need to receive requests and sent response.
-- **To Reminder:** Need to make photo and video upload in background by using queue.
+### 5/6/2026 — Authentication and Authorization
+
+- Integrated JWT authentication.
+- Added register, login, logout, and refresh token APIs.
+- Stored access tokens in Redux state.
+- Stored refresh tokens in cookies.
+- Added protected routes.
+- Implemented Redux Toolkit Query.
+
+### 6/6/2026 — Post Management
+
+- Implemented Post CRUD APIs.
+- Added cursor pagination.
+- Added infinite scrolling support.
+- Used eager loading to prevent N+1 queries.
+- Organized business logic into service classes and validation requests.
+
+### 8/9/2026 — Media Upload and Authorization
+
+- Added image and video upload using Cloudinary.
+- Added media edit, replace, and delete functionality.
+- Used Laravel model binding for posts and media.
+- Added polymorphic relationships using `morphMany`.
+- Prepared media support for posts, comments, messages, and chats.
+- Added Gates and Policies.
+- Users can only edit and delete their own posts and media.
+
+## Planned Features
+
+- Background media uploads using Laravel Queues.
+- Media APIs for comments, messages, and chats.
+- Additional e-commerce features.
+
+## Tech Stack
+
+- Laravel
+- React
+- JWT
+- Redux Toolkit Query
+- MySQL
+- Cloudinary
